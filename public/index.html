@@ -1,265 +1,872 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DevOps Practice App</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
+      <div class="logo">DevOps♾️</div>
 
-        <div class="logo">
-            🚀 DevOpsLab
-        </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        
+  <button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Switch to dark mode"
+  aria-pressed="false"
+>
+  ☀️
+</button>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-
+      </div>
     </nav>
-
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tagline">WELCOME TO MY DEVOPS PROJECT</p>
 
-        <div class="hero-content">
+        <h1>
+          Build. Deploy.
+          <span>Automate.</span>
+        </h1>
 
-            <p class="tagline">WELCOME TO MY DEVOPS PROJECT</p>
+        <p class="description">
+          A simple Node.js application running inside a Docker container. This
+          project is built for learning and practicing DevOps concepts.
+        </p>
 
-            <h1>
-                Build. Deploy.
-                <span>Automate.</span>
-            </h1>
+        <div class="buttons">
+          <a href="#services" class="btn primary"> Explore Project </a>
 
-            <p class="description">
-                A simple Node.js application running inside
-                a Docker container. This project is built for
-                learning and practicing DevOps concepts.
-            </p>
+          <a href="#about" class="btn secondary"> Learn More </a>
+        </div>
+      </div>
 
-            <div class="buttons">
-
-                <a href="#services" class="btn primary">
-                    Explore Project
-                </a>
-
-                <a href="#about" class="btn secondary">
-                    Learn More
-                </a>
-
-            </div>
-
+      <div class="hero-card">
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <div class="hero-card">
+        <div class="terminal">
+          <p><span class="green">$</span> docker build</p>
+          <p><span class="green">$</span> docker run</p>
+          <p><span class="green">$</span> docker ps</p>
 
-            <div class="terminal-header">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div class="terminal">
-
-                <p><span class="green">$</span> docker build</p>
-                <p><span class="green">$</span> docker run</p>
-                <p><span class="green">$</span> docker ps</p>
-
-                <p class="success">
-                    ✓ Container is running
-                </p>
-
-            </div>
-
+          <p class="success">✓ Container is running</p>
         </div>
-
+      </div>
     </section>
-
 
     <!-- About Section -->
     <section class="about" id="about">
+      <p class="section-label">ABOUT PROJECT</p>
 
-        <p class="section-label">ABOUT PROJECT</p>
+      <h2>
+        My First Dockerized
+        <span>Node.js Application</span>
+      </h2>
 
-        <h2>
-            My First Dockerized
-            <span>Node.js Application</span>
-        </h2>
-
-        <p class="section-description">
-            This project demonstrates how a Node.js application
-            can be packaged into a Docker image and executed
-            inside a Docker container.
-        </p>
-
+      <p class="section-description">
+        This project demonstrates how a Node.js application can be packaged into
+        a Docker image and executed inside a Docker container.
+      </p>
     </section>
 
-
-    <!-- Services / Technologies -->
+    <!-- Interactive DevOps Tools Explorer -->
     <section class="services" id="services">
+      <p class="section-label">EXPLORE THE TOOLKIT</p>
 
-        <p class="section-label">TECHNOLOGIES</p>
+      <h2>DevOps Tools <span>Explorer</span></h2>
 
-        <h2>
-            Tools Used In This
-            <span>Project</span>
-        </h2>
+      <p class="section-description">
+        Discover what each tool does, why engineers use it, and where it fits
+        into a real-world DevOps workflow. Select any card to explore.
+      </p>
 
-        <div class="cards">
+      <div class="tools-toolbar">
+        <label class="tool-search">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="toolSearch"
+            placeholder="Search tools, e.g. Docker..."
+            aria-label="Search DevOps tools"
+          />
+        </label>
 
-            <div class="card">
-
-                <div class="icon">🟢</div>
-
-                <h3>Node.js</h3>
-
-                <p>
-                    JavaScript runtime used to build
-                    the backend application.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🐳</div>
-
-                <h3>Docker</h3>
-
-                <p>
-                    Used to package and run the
-                    application inside a container.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🌐</div>
-
-                <h3>HTML & CSS</h3>
-
-                <p>
-                    Used to create the attractive
-                    frontend interface.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">⚙️</div>
-
-                <h3>Express.js</h3>
-
-                <p>
-                    Lightweight framework used to
-                    create the Node.js web server.
-                </p>
-
-            </div>
-
+        <div class="tool-filters" role="group" aria-label="Filter tools">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="development"
+            aria-pressed="false"
+          >
+            Development
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="containers"
+            aria-pressed="false"
+          >
+            Containers
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="automation"
+            aria-pressed="false"
+          >
+            CI/CD
+          </button>
+          <button class="filter-btn" data-filter="cloud" aria-pressed="false">
+            Cloud & IaC
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="monitoring"
+            aria-pressed="false"
+          >
+            Monitoring
+          </button>
         </div>
+      </div>
 
+      <p class="tools-count" id="toolsCount" aria-live="polite">
+        Showing 10 tools
+      </p>
+
+      <div class="cards tools-grid" id="toolsGrid">
+        <button
+          class="card tool-card"
+          data-tool="node"
+          data-category="development"
+          data-search="node.js node javascript backend runtime"
+        >
+          <span class="icon" aria-hidden="true">🟢</span>
+          <span class="tool-category">DEVELOPMENT</span>
+          <span class="tool-title">Node.js</span>
+          <span class="tool-description"
+            >Runs JavaScript on the server to build application backends.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="express"
+          data-category="development"
+          data-search="express.js express node api routes web server"
+        >
+          <span class="icon" aria-hidden="true">⚙️</span>
+          <span class="tool-category">DEVELOPMENT</span>
+          <span class="tool-title">Express.js</span>
+          <span class="tool-description"
+            >Simplifies HTTP routes, APIs, and web servers in Node.js.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="docker"
+          data-category="containers"
+          data-search="docker containers images dockerfile packaging"
+        >
+          <span class="icon" aria-hidden="true">🐳</span>
+          <span class="tool-category">CONTAINERS</span>
+          <span class="tool-title">Docker</span>
+          <span class="tool-description"
+            >Packages applications and dependencies into portable
+            containers.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="git"
+          data-category="development"
+          data-search="git version control commits branches"
+        >
+          <span class="icon" aria-hidden="true">🌿</span>
+          <span class="tool-category">DEVELOPMENT</span>
+          <span class="tool-title">Git</span>
+          <span class="tool-description"
+            >Tracks source-code changes and supports collaboration.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="github"
+          data-category="development"
+          data-search="github repository source control pull requests"
+        >
+          <span class="icon" aria-hidden="true">🐙</span>
+          <span class="tool-category">DEVELOPMENT</span>
+          <span class="tool-title">GitHub</span>
+          <span class="tool-description"
+            >Hosts repositories and helps teams review and manage code.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="actions"
+          data-category="automation"
+          data-search="github actions ci cd workflow testing automation deployment"
+        >
+          <span class="icon" aria-hidden="true">🔄</span>
+          <span class="tool-category">CI/CD</span>
+          <span class="tool-title">GitHub Actions</span>
+          <span class="tool-description"
+            >Automates testing, image builds, and deployment workflows.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="aws"
+          data-category="cloud"
+          data-search="aws cloud ec2 vpc iam infrastructure"
+        >
+          <span class="icon" aria-hidden="true">☁️</span>
+          <span class="tool-category">CLOUD</span>
+          <span class="tool-title">AWS</span>
+          <span class="tool-description"
+            >Provides cloud compute, networking, storage, and security
+            services.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="terraform"
+          data-category="cloud"
+          data-search="terraform infrastructure as code iac provisioning"
+        >
+          <span class="icon" aria-hidden="true">🏗️</span>
+          <span class="tool-category">CLOUD & IaC</span>
+          <span class="tool-title">Terraform</span>
+          <span class="tool-description"
+            >Defines and provisions infrastructure through configuration
+            files.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="kubernetes"
+          data-category="containers"
+          data-search="kubernetes k8s orchestration pods deployments services"
+        >
+          <span class="icon" aria-hidden="true">☸️</span>
+          <span class="tool-category">CONTAINERS</span>
+          <span class="tool-title">Kubernetes</span>
+          <span class="tool-description"
+            >Orchestrates containerized applications across a cluster.</span
+          >
+          <span class="tool-action"
+            >Explore tool <span aria-hidden="true">↗</span></span
+          >
+        </button>
+
+        <button
+          class="card tool-card"
+          data-tool="monitoring"
+          data-category="monitoring"
+          data-search="prometheus grafana metrics dashboards alerts observability"
+        >
+          <span class="icon" aria-hidden="true">📊</span>
+          <span class="tool-category">MONITORING</span>
+          <span class="tool-title">Prometheus & Grafana</span>
+          <span class="tool-description"
+            >Collects metrics, visualizes system health, and supports
+            alerting.</span
+          >
+          <span class="tool-action"
+            >Explore tools <span aria-hidden="true">↗</span></span
+          >
+        </button>
+      </div>
+
+      <p class="no-tools" id="noTools" hidden>
+        No tools found. Try another search or category.
+      </p>
     </section>
-
 
     <!-- DevOps Pipeline -->
     <section class="pipeline">
+      <p class="section-label">DEVOPS WORKFLOW</p>
 
-        <p class="section-label">DEVOPS WORKFLOW</p>
+      <h2>
+        From Code To
+        <span>Container</span>
+      </h2>
 
-        <h2>
-            From Code To
-            <span>Container</span>
-        </h2>
-
-        <div class="pipeline-container">
-
-            <div class="step">
-                <div class="step-number">01</div>
-                <h3>Code</h3>
-                <p>Write Node.js application</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="step">
-                <div class="step-number">02</div>
-                <h3>Build</h3>
-                <p>Create Docker image</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="step">
-                <div class="step-number">03</div>
-                <h3>Run</h3>
-                <p>Create Docker container</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="step">
-                <div class="step-number">04</div>
-                <h3>Deploy</h3>
-                <p>Access application</p>
-            </div>
-
+      <div class="pipeline-container">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Code</h3>
+          <p>Write Node.js application</p>
         </div>
 
-    </section>
+        <div class="arrow">→</div>
 
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Build</h3>
+          <p>Create Docker image</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Run</h3>
+          <p>Create Docker container</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Deploy</h3>
+          <p>Access application</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
+      <p class="section-label">GET STARTED</p>
 
-        <p class="section-label">GET STARTED</p>
+      <h2>
+        Ready To Learn
+        <span>DevOps?</span>
+      </h2>
 
-        <h2>
-            Ready To Learn
-            <span>DevOps?</span>
-        </h2>
+      <p>Keep practicing. Build projects. Automate everything.</p>
 
-        <p>
-            Keep practicing. Build projects. Automate everything.
-        </p>
-
-        <a href="#home" class="btn primary">
-            Back To Top ↑
-        </a>
-
+      <a href="#home" class="btn primary"> Back To Top ↑ </a>
     </section>
-
 
     <!-- Footer -->
     <footer>
+      <p>🚀 DevOpsLab</p>
 
-        <p>
-            🚀 DevOpsLab
-        </p>
-
-        <p>
-            Built with Node.js & Docker
-        </p>
-
+      <p>Built with Node.js & Docker</p>
     </footer>
 
-</body>
+    <!-- Tool details dialog -->
+    <div class="tool-modal" id="toolModal" hidden>
+      <div class="tool-modal-backdrop" data-close-modal></div>
 
+      <section
+        class="tool-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalSummary"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Close tool details"
+        >
+          ×
+        </button>
+
+        <p class="section-label" id="modalCategory">DEVOPS TOOL</p>
+        <h2 id="modalTitle">Tool name</h2>
+        <p id="modalSummary" class="modal-summary"></p>
+
+        <div class="modal-info-grid">
+          <article class="modal-info">
+            <h3>🎯 Why is it used?</h3>
+            <p id="modalWhy"></p>
+          </article>
+
+          <article class="modal-info">
+            <h3>📍 Where is it used?</h3>
+            <p id="modalWhere"></p>
+          </article>
+
+          <article class="modal-info">
+            <h3>🔧 Example in a project</h3>
+            <p id="modalExample"></p>
+          </article>
+
+          <article class="modal-info">
+            <h3>🚀 DevOps workflow</h3>
+            <p id="modalWorkflow"></p>
+          </article>
+        </div>
+
+        <div class="modal-command">
+          <div class="command-heading">
+            <h3>Useful command</h3>
+            <button id="copyCommand" type="button" class="copy-btn">
+              Copy command
+            </button>
+          </div>
+          <code id="modalCommand"></code>
+          <p class="command-note" id="commandNote"></p>
+          <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+        </div>
+
+        <button type="button" class="btn primary modal-done" id="modalDone">
+          Done
+        </button>
+      </section>
+    </div>
+
+    
+<script>
+  (() => {
+    // ==========================================
+    // DEVOPS TOOLS EXPLORER
+    // ==========================================
+    const grid = document.getElementById("toolsGrid");
+    const cards = [...grid.querySelectorAll(".tool-card")];
+    const search = document.getElementById("toolSearch");
+    const filters = [...document.querySelectorAll(".filter-btn")];
+    const count = document.getElementById("toolsCount");
+    const emptyMessage = document.getElementById("noTools");
+
+    // ==========================================
+    // TOOL DETAILS MODAL
+    // ==========================================
+    const modal = document.getElementById("toolModal");
+    const panel = modal.querySelector(".tool-modal-panel");
+    const closeButton = document.getElementById("modalClose");
+    const doneButton = document.getElementById("modalDone");
+    const copyButton = document.getElementById("copyCommand");
+
+    // ==========================================
+    // THEME TOGGLE
+    // ==========================================
+    const themeToggle = document.getElementById("theme-toggle");
+    const THEME_KEY = "devopslab-theme";
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+
+      document.body.classList.toggle("dark-mode", isDark);
+      document.body.classList.toggle("light-mode", !isDark);
+
+      themeToggle.textContent = isDark ? "🌙" : "☀️";
+
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
+
+      localStorage.setItem(THEME_KEY, theme);
+    }
+
+    // Restore the saved theme, defaulting to light mode.
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+    // Register the theme click handler only once.
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.body.classList.contains("dark-mode");
+      applyTheme(isDark ? "light" : "dark");
+    });
+
+    // ==========================================
+    // TOOL DATA
+    // ==========================================
+    let activeFilter = "all";
+    let lastFocusedCard = null;
+
+    const tools = {
+      node: {
+        name: "Node.js",
+        category: "DEVELOPMENT",
+        summary:
+          "A JavaScript runtime that executes JavaScript outside a web browser.",
+        why:
+          "It lets developers build server-side applications and APIs using JavaScript.",
+        where:
+          "Web backends, REST APIs, microservices, command-line tools, and build systems.",
+        example:
+          "Runs this project's app.js file and starts the web server on port 3000.",
+        workflow:
+          "Write JavaScript → install dependencies with npm → run tests → package the app.",
+        command: "node app.js",
+        note: "Run from the directory containing app.js."
+      },
+
+      express: {
+        name: "Express.js",
+        category: "DEVELOPMENT",
+        summary: "A lightweight web framework for Node.js.",
+        why:
+          "It simplifies HTTP routes, request handling, middleware, and API development.",
+        where: "Web applications, REST APIs, and small services.",
+        example:
+          "Serves this project's HTML and CSS files to the browser.",
+        workflow:
+          "Create routes and middleware → validate requests → return responses.",
+        command: "npm start",
+        note:
+          "Run from the project directory after installing dependencies."
+      },
+
+      docker: {
+        name: "Docker",
+        category: "CONTAINERS",
+        summary:
+          "A platform for building and running applications in containers.",
+        why:
+          "Containers package an application with its dependencies for more consistent environments.",
+        where:
+          "Local development, CI/CD pipelines, test environments, and cloud servers.",
+        example:
+          "Builds the image for this Node.js app and runs it as a container.",
+        workflow: "Dockerfile → image → registry → container.",
+        command: "docker build -t node-docker-app .",
+        note:
+          "Run from the directory containing your Dockerfile."
+      },
+
+      git: {
+        name: "Git",
+        category: "DEVELOPMENT",
+        summary: "A distributed version-control system.",
+        why:
+          "It records changes, supports branches, and helps teams track and review code.",
+        where:
+          "Almost every software development and DevOps workflow.",
+        example:
+          "Tracks updates to index.html, style.css, and app.js.",
+        workflow:
+          "Edit files → commit changes → push to a remote repository.",
+        command: "git status",
+        note:
+          "Run inside your Git repository to inspect changed files."
+      },
+
+      github: {
+        name: "GitHub",
+        category: "DEVELOPMENT",
+        summary:
+          "A platform for hosting Git repositories and collaborating on software.",
+        why:
+          "It keeps source code remotely accessible and supports code review and automation.",
+        where:
+          "Team repositories, pull requests, issue tracking, and CI/CD.",
+        example:
+          "Stores this project's source code and README.",
+        workflow:
+          "Commit locally → push to GitHub → review and collaborate.",
+        command: "git push origin main",
+        note:
+          "Assumes your remote is named origin and your branch is main."
+      },
+
+      actions: {
+        name: "GitHub Actions",
+        category: "CI/CD",
+        summary:
+          "A workflow automation platform integrated with GitHub.",
+        why:
+          "It automates repeatable checks and delivery tasks after code changes.",
+        where:
+          "Continuous integration, automated tests, image publishing, and deployments.",
+        example:
+          "A workflow could test the app, build its Docker image, and push it to Docker Hub.",
+        workflow:
+          "Git push → tests → Docker build → registry push → deployment.",
+        command: "npm test",
+        note:
+          "Configure a test script in package.json before running this command."
+      },
+
+      aws: {
+        name: "Amazon Web Services (AWS)",
+        category: "CLOUD",
+        summary:
+          "A cloud platform offering compute, networking, storage, and managed services.",
+        why:
+          "It provides infrastructure that can scale and be managed on demand.",
+        where:
+          "Hosting applications, private networks, databases, storage, and production workloads.",
+        example:
+          "Run the Dockerized application on an EC2 instance behind a load balancer.",
+        workflow:
+          "Provision networking and compute → deploy the app → secure and monitor it.",
+        command: "aws sts get-caller-identity",
+        note:
+          "Requires the AWS CLI and configured credentials."
+      },
+
+      terraform: {
+        name: "Terraform",
+        category: "CLOUD & IaC",
+        summary:
+          "An infrastructure-as-code tool for defining infrastructure declaratively.",
+        why:
+          "It makes infrastructure repeatable, reviewable, and easier to recreate consistently.",
+        where:
+          "Cloud networks, virtual machines, access policies, and managed cloud resources.",
+        example:
+          "Define an AWS VPC and EC2 resources in version-controlled configuration files.",
+        workflow:
+          "Write configuration → terraform plan → review → terraform apply.",
+        command: "terraform plan",
+        note:
+          "Run in a directory containing Terraform configuration files."
+      },
+
+      kubernetes: {
+        name: "Kubernetes",
+        category: "CONTAINERS",
+        summary:
+          "A system for orchestrating containerized workloads across a cluster.",
+        why:
+          "It manages scheduling, service discovery, scaling, and recovery of container workloads.",
+        where:
+          "Multi-service applications and container platforms that need orchestration.",
+        example:
+          "Deploy the app with a Deployment and expose it through a Service.",
+        workflow:
+          "Build image → publish image → apply manifests → monitor workloads.",
+        command: "kubectl get pods",
+        note:
+          "Requires kubectl and access to a configured Kubernetes cluster."
+      },
+
+      monitoring: {
+        name: "Prometheus & Grafana",
+        category: "MONITORING",
+        summary:
+          "Prometheus collects time-series metrics; Grafana visualizes data in dashboards.",
+        why:
+          "Together they help engineers understand performance, identify failures, and configure alerts.",
+        where:
+          "Servers, containers, applications, Kubernetes clusters, and production services.",
+        example:
+          "Monitor CPU, memory, application health, and request metrics after adding instrumentation and exporters.",
+        workflow:
+          "Export metrics → Prometheus scrapes them → Grafana visualizes them → alert on defined conditions.",
+        command: "docker ps",
+        note:
+          "This lists running containers. Prometheus and Grafana require separate configuration."
+      }
+    };
+
+    // ==========================================
+    // SEARCH AND CATEGORY FILTERS
+    // ==========================================
+    function filterTools() {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const matchesCategory =
+          activeFilter === "all" ||
+          card.dataset.category === activeFilter;
+
+        const searchableText = [
+          card.dataset.search || "",
+          card.innerText
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = searchableText.includes(query);
+        const show = matchesCategory && matchesSearch;
+
+        card.hidden = !show;
+
+        if (show) visible++;
+      });
+
+      count.textContent = `Showing ${visible} of ${cards.length} tools`;
+      emptyMessage.hidden = visible !== 0;
+    }
+
+    filters.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+
+        filters.forEach((filter) => {
+          const selected = filter === button;
+
+          filter.classList.toggle("active", selected);
+          filter.setAttribute("aria-pressed", String(selected));
+        });
+
+        filterTools();
+      });
+    });
+
+    search.addEventListener("input", filterTools);
+
+    // ==========================================
+    // OPEN AND CLOSE TOOL DETAILS
+    // ==========================================
+    function openTool(key, card) {
+      const tool = tools[key];
+      if (!tool) return;
+
+      lastFocusedCard = card;
+
+      document.getElementById("modalCategory").textContent =
+        tool.category;
+      document.getElementById("modalTitle").textContent =
+        tool.name;
+      document.getElementById("modalSummary").textContent =
+        tool.summary;
+      document.getElementById("modalWhy").textContent =
+        tool.why;
+      document.getElementById("modalWhere").textContent =
+        tool.where;
+      document.getElementById("modalExample").textContent =
+        tool.example;
+      document.getElementById("modalWorkflow").textContent =
+        tool.workflow;
+      document.getElementById("modalCommand").textContent =
+        tool.command;
+      document.getElementById("commandNote").textContent =
+        tool.note;
+      document.getElementById("copyStatus").textContent = "";
+
+      modal.hidden = false;
+      document.body.classList.add("modal-open");
+      closeButton.focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+
+      if (lastFocusedCard) {
+        lastFocusedCard.focus();
+      }
+    }
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        openTool(card.dataset.tool, card);
+      });
+    });
+
+    closeButton.addEventListener("click", closeModal);
+    doneButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target.matches("[data-close-modal]")) {
+        closeModal();
+      }
+    });
+
+    // ==========================================
+    // MODAL KEYBOARD ACCESSIBILITY
+    // ==========================================
+    document.addEventListener("keydown", (event) => {
+      if (modal.hidden) return;
+
+      if (event.key === "Escape") {
+        closeModal();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusable = [
+        ...panel.querySelectorAll(
+          'button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ].filter((element) => !element.hidden);
+
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (
+        event.shiftKey &&
+        document.activeElement === first
+      ) {
+        event.preventDefault();
+        last.focus();
+      } else if (
+        !event.shiftKey &&
+        document.activeElement === last
+      ) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    // ==========================================
+    // COPY COMMAND
+    // ==========================================
+    copyButton.addEventListener("click", async () => {
+      const command =
+        document.getElementById("modalCommand").textContent;
+      const status = document.getElementById("copyStatus");
+
+      try {
+        await navigator.clipboard.writeText(command);
+        status.textContent = "Command copied!";
+      } catch {
+        status.textContent =
+          "Copy was blocked. Select the command and copy it manually.";
+      }
+    });
+
+    // Initial tool list
+    filterTools();
+  })();
+</script>
+
+  </body>
 </html>
-```
+
